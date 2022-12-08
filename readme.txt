@@ -189,9 +189,9 @@ kawpow, rvn, ravencoin   1%
 cortex                   5%
 ergo, autolykos2         1%
 kaspa, kheavyhash        1%
-ethw+kaspa, ethash+kheavyhash2%
-etc+kaspa, etchash+kheavyhash2%
-ergo+kaspa, autolykos2+kheavyhash3%
+ethw+kaspa, ethash+kheavyhash 2% + 0%
+etc+kaspa, etchash+kheavyhash 2% + 0%
+ergo+kaspa, autolykos2+kheavyhash 3% + 0%
 aeternity, cuckoo29      2%
 beamhash                 2%
 equihash144_5            2%
@@ -199,3 +199,5 @@ equihash125_4            2%
 equihash192_7            2%
 equihash210_9            2%
 cuckoo29, aeternity      2%
+grin32, cuckatoo32       5%
+vds                      10%
