@@ -55,17 +55,18 @@ Miner options:
 '--devices' or shortly '-d' - space-separated list of cuda devices, default value is all available devices (for example: '1 3 5')
 '--kernel' or shortly '-k' - space-separated list of kernel numbers for each device (0 - auto, 1-6 - kernel number, currently supports 6 kernels for Nvidia on Ethash/Etchash) (for example: '1 3 5')
 '--mt' - space-separated list of memory tweak numbers for each device (range from 0 to 6, 0 - disable tweaks), only Nvidia GPUs with GDDR5X and GDDR5 memory are supported, requires running miner with admin privileges (for example: '1 3 5')
-'--fan' - space-separated list of fan speed for each device in percents (range from 0 to 100, 0 - ignore), only Windows is supported (for example: '60 0 90')
-'--pl' - space-separated list of power limits for each device in percents (range from 0 to 100 for Nvidia GPUs and -50 - 50 for AMD GPUs, 0 - ignore), only Windows is supported (for example: '30 0 50')
-'--cclock' - space-separated list of core clock offsets (for Nvidia GPUs) or absolute core clocks (for AMD GPUs) for each device in MHz (0 - ignore), only Windows is supported, requires running miner with admin privileges (for example: '100 0 -90')
-'--mclock' - space-separated list of memory clock offsets (for Nvidia GPUs) or absolute memory clocks (for AMD GPUs) for each device in MHz (0 - ignore), only Windows is supported, requires running miner with admin privileges (for example: '100 0 -90')
+'--fan' - space-separated list of fan speed for each device in percents (range from 0 to 100, 0 - ignore)(for example: '60 0 90')
+'--pl' - space-separated list of power limits for each device in percents (range from 0 to 100 for Nvidia GPUs and -50 - 50 for AMD GPUs, 0 - ignore)(for example: '30 0 50')
+'--cclock' - space-separated list of core clock offsets (for Nvidia GPUs) or absolute core clocks (for AMD GPUs) for each device in MHz (0 - ignore), requires running miner with admin privileges (for example: '100 0 -90')
+'--mclock' - space-separated list of memory clock offsets (for Nvidia GPUs) or absolute memory clocks (for AMD GPUs) for each device in MHz (0 - ignore), requires running miner with admin privileges (for example: '100 0 -90')
 '--cvddc' - space-separated list of core voltage offsets in % (for Nvidia GPUs) or absolute core voltages (for AMD GPUs) for each device in mV (0 - ignore), only Windows is supported, requires running miner with admin privileges (for example: '900 0 1100')
 '--lock_voltage' - space-separated list of locked voltage points for each device in mV (0 - ignore), only Windows and Nvidia GPUs are supported. Requires running miner with admin privileges (for example: '900 0 1000')
 '--lock_cclock' - space-separated list of locked core clock point for each device in MHz (0 - ignore), only Nvidia GPUs are supported. Requires running miner with admin privileges (for example: '1200 0 1500')
+'--lock_mclock' - space-separated list of locked memory clock point for each device in MHz (0 - ignore), only Nvidia GPUs are supported. Requires running miner with admin privileges (for example: '810 0 1000')
 '--p2state' - enable/disable P2 state, only Windows and Nvidia GPUs are supported. Requires running miner with admin privileges
-'--tfan' - space-separated list of target temperatures for fan (0 - ignore), only Windows is supported (for example: '65 0 70')
-'--tfan_min' - space-separated list of minimal fan speed (0 - ignore) for tfan option, only Windows is supported (for example: '30 0 35')
-'--tfan_max' - space-separated list of maximal fan speed (0 - ignore) for tfan option, only Windows is supported (for example: '90 0 80')
+'--tfan' - space-separated list of target temperatures for fan (0 - ignore)(for example: '65 0 70')
+'--tfan_min' - space-separated list of minimal fan speed (0 - ignore) for tfan option (for example: '30 0 35')
+'--tfan_max' - space-separated list of maximal fan speed (0 - ignore) for tfan option (for example: '90 0 80')
 '--logfile' or shortly '-l' - filename to save logs on disk, default value is '' (for example: '/usr/user/miner.log', 'c:\miner.log')
 '--log_date' - enable/disable date in each message, default value is '0' ('0' - off or '1' - on)
 '--log_stratum' - enable/disable data of communication with the server, default value is '0' ('0' - off or '1' - on)
@@ -189,9 +190,9 @@ kawpow, rvn, ravencoin   1%
 cortex                   5%
 ergo, autolykos2         1%
 kaspa, kheavyhash        1%
-ethw+kaspa, ethash+kheavyhash 2% + 0%
-etc+kaspa, etchash+kheavyhash 2% + 0%
-ergo+kaspa, autolykos2+kheavyhash 3% + 0%
+ethw+kaspa, ethash+kheavyhash2%
+etc+kaspa, etchash+kheavyhash2%
+ergo+kaspa, autolykos2+kheavyhash3%
 aeternity, cuckoo29      2%
 beamhash                 2%
 equihash144_5            2%
@@ -199,5 +200,3 @@ equihash125_4            2%
 equihash192_7            2%
 equihash210_9            2%
 cuckoo29, aeternity      2%
-grin32, cuckatoo32       5%
-vds                      10%
